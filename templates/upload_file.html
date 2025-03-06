@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wafer Fault Detection</title>
+    
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    
+    <!-- Link to Flask Static CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+
+<!-- Form for CSV Upload -->
+<form action="/predict" method="post" enctype="multipart/form-data">
+    <h1 class="title">Upload CSV for Prediction</h1>
+
+    <div class="frame">
+        <div class="center">
+            <div class="title">
+                <h1>Drop file to upload</h1>
+            </div>
+
+            <!-- Dropzone with File Input -->
+            <label class="dropzone">
+                <img src="{{ url_for('static', filename='images/upload.svg') }}" class="upload-icon" />
+                <input type="file" class="upload-input" name="file" accept=".csv">
+            </label>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn" name="uploadbutton">Upload File</button>
+        </div>
+    </div>
+</form>
+
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Link to Flask Static JavaScript -->
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

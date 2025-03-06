@@ -3,14 +3,14 @@ import pandas as pd
 import json
 
 #url
-uri="mongodb+srv://skssanjeet9835:0GInb5glPzvuGPMw@cluster0.g3cma.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+uri = "mongodb+srv://skssanjeet9835:0GInb5glPzvuGPMw@cluster0.g3cma.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 #create a new client and connectt to server
 client = MongoClient(uri)
 
 #create database name and collection name
-DATABASE_NAME="pwskills"
-COLLECTION_NAME='waferfault'
+DATABASE_NAME="Sensor_project"
+COLLECTION_NAME='wafer_fault'
 
 df=pd.read_csv("E:\Sensor Project\notebooks\wafer_23012020_041211.csv")
 
