@@ -2,7 +2,7 @@
 import os
 
 
-AWS_S3_BUCKET_NAME = "wafer-fault-sanjeet"
+AWS_S3_BUCKET_NAME = "wafer-fault"
 MONGO_DATABASE_NAME = "Sensor_project"
 MONGO_COLLECTION_NAME = "wafer_fault"
 
